@@ -35,7 +35,7 @@ body header.main-header {
 
 body .main-content {
   height: 50vh;
-  background-color: rgba(4, 20, 110, 0.753);
+  background-color: rgba(30, 30, 31, 0.849);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,7 +82,7 @@ body .main-content .main-cards {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  background-color: #1eff00;
+  background-color: rgba(15, 15, 15, 0.904);
   -ms-grid-columns: (auto)[4];
       grid-template-columns: repeat(4, auto);
   grid-gap: 0.5em;
@@ -103,6 +103,12 @@ body .main-content .main-cards .card-item {
   text-align: center;
 }
 
+body .main-content .main-cards .card-item .card-inf {
+  color: #ebdddd;
+  padding: 0.3em;
+  padding-bottom: 1em;
+}
+
 body .main-content .main-cards .card-item .img-card {
   width: 80%;
   height: 80%;
@@ -111,5 +117,15 @@ body .main-content .main-cards .card-item .img-card {
 body .main-footer {
   height: 15%;
   background-color: rgba(23, 26, 25, 0.753);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: rgba(2, 2, 2, 0.2);
+  }
+  body .main-content .main-cards {
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

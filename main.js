@@ -23,7 +23,8 @@ async function readJSON(){
         //imgHTML.setAttribute("class","img-card");
         imgHTML.setAttribute("src",item.card_images[0].image_url_small);
         const divCardInfHTML = document.createElement("div");
-        
+        divCardInfHTML.setAttribute("class","card-inf");
+
         const pNameHTML = document.createElement("p");
         const pRaceHTML = document.createElement("p");
         const pArcheHTML = document.createElement("p");

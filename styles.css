@@ -78,6 +78,36 @@ body .main-content .main-look-up button#btn-search:hover {
   cursor: pointer;
 }
 
+body .main-content .main-cards {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  background-color: #1eff00;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  grid-gap: 0.5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .main-content .main-cards .card-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(40, 40, 41, 0.884);
+  color: whitesmoke;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+body .main-content .main-cards .card-item .img-card {
+  width: 80%;
+  height: 80%;
+}
+
 body .main-footer {
   height: 15%;
   background-color: rgba(23, 26, 25, 0.753);

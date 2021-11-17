@@ -18,6 +18,9 @@ body{
         align-items:center;
         color: #fff;
         font-size: 2em;
+        & i{
+            font-size: 4.5vw;
+        }
     }
     & .main-content{
         height:50vh;
@@ -39,8 +42,11 @@ body{
                 width: 20vw;
                 height:3em;
                 transition:  all 1s;
-                background-color:rgba(241, 234, 234, 0.979);
+                background-color:rgb(255, 255, 255);
                 font-weight: bold;
+                & i{
+                    font-size: 2vw;
+                }
                 &:hover{
                     color: whitesmoke;
                     box-shadow: 0px -3em rgba(194, 27, 5, 0.89) inset, 0px 3em rgba(31, 32, 31, 0.89) inset;
@@ -72,7 +78,9 @@ body{
                 color:whitesmoke;
                 border-radius:0.3em;
                 text-align:center;
-                
+            }
+            & .card-item-hide{
+                display: none;
             }
         }
     }
@@ -83,15 +91,57 @@ body{
     }
 }
 
+
+
 @media screen and (max-width: 768px){
 
     body{
-        background-color:rgba(2,2,2,0.2);
+        & header.main-header{
+           
+            & i{
+                font-size: 4.5vh;
+            }
+        }
+        & .main-content{
+         & .main-cards{
+            //display: grid;
+            grid-template-columns: repeat(2,auto);
+        }
+        & .main-look-up{
 
-        & .main-content .main-cards{
+            & button#btn-search{
+                & i{
+                    font-size:2vh;
+                }
+            }
+        }
+            
+
+    }
+}
+}
+@media screen and (max-width: 480px){
+
+    body{
+        
+        & .main-content{
+         & .main-cards{
             //display: grid;
             grid-template-columns: repeat(1,auto);
         }
+        & .main-look-up{
+            & input#input-search{
+                width: 100vw;
+            }
+            & button#btn-search{
+                width: 100vw;
+                & i{
+                    font-size:2vh;
+                }
+            }
+        }
+            
 
     }
+}
 }

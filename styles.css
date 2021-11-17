@@ -33,6 +33,10 @@ body header.main-header {
   font-size: 2em;
 }
 
+body header.main-header i {
+  font-size: 4.5vw;
+}
+
 body .main-content {
   height: 50vh;
   background-color: rgba(30, 30, 31, 0.849);
@@ -67,8 +71,12 @@ body .main-content .main-look-up button#btn-search {
   height: 3em;
   -webkit-transition: all 1s;
   transition: all 1s;
-  background-color: rgba(241, 234, 234, 0.979);
+  background-color: white;
   font-weight: bold;
+}
+
+body .main-content .main-look-up button#btn-search i {
+  font-size: 2vw;
 }
 
 body .main-content .main-look-up button#btn-search:hover {
@@ -114,18 +122,41 @@ body .main-content .main-cards .card-item .img-card {
   height: 80%;
 }
 
+body .main-content .main-cards .card-item-hide {
+  display: none;
+}
+
 body .main-footer {
   height: 15%;
   background-color: rgba(23, 26, 25, 0.753);
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    background-color: rgba(2, 2, 2, 0.2);
+  body header.main-header i {
+    font-size: 4.5vh;
   }
+  body .main-content .main-cards {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
+  body .main-content .main-look-up button#btn-search i {
+    font-size: 2vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
   body .main-content .main-cards {
     -ms-grid-columns: (auto)[1];
         grid-template-columns: repeat(1, auto);
+  }
+  body .main-content .main-look-up input#input-search {
+    width: 100vw;
+  }
+  body .main-content .main-look-up button#btn-search {
+    width: 100vw;
+  }
+  body .main-content .main-look-up button#btn-search i {
+    font-size: 2vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */

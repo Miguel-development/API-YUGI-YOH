@@ -35,6 +35,8 @@ async function readJSON(){
         const pArcheTextNodeHTML = document.createTextNode(`Archetype: ${item.archetype}`);
         const pDescTextNodeHTML = document.createTextNode(`Description: ${item.desc}`);
 
+        pNameHTML.setAttribute("class","card-p-item");
+
         pNameHTML.appendChild(pNameTextNodeHTML);
         pRaceHTML.appendChild(pRaceTextNodeHTML);
         pArcheHTML.appendChild(pArcheTextNodeHTML);
@@ -53,10 +55,46 @@ async function readJSON(){
 
         divMainCardsHTML.appendChild(divItemHTML);
     
-        console.log(item);
+        //console.log(item);
         i++;
-        if(i>45) break;
+        if(i>5) break;
     }
 }
 
 readJSON();
+
+
+const d = document;
+const divItemHTML = d.getElementsByClassName('card-item');
+
+d.addEventListener("DOMContentLoaded",(e)=>{
+    const inputSearch = d.querySelector("#input-search");
+    d.addEventListener("click",(ee)=>{
+        if(ee.target.id == "btn-search"){
+            //console.log(inputSearch.value); 
+            Array.from(divItemHTML).forEach((x)=>{
+                if(x.getElementsByClassName("card-p-item")[0].textContent.toLowerCase().includes(inputSearch.value.toLowerCase())){
+                   // console.log();
+                    x.classList.remove("card-item-hide");
+                }else{
+                    x.classList.add("card-item-hide");
+                };
+            });
+        }
+    });
+
+    d.addEventListener("input",(ee)=>{
+        if(ee.target.id == "input-search"){
+            console.log(ee.target.value);
+            Array.from(divItemHTML).forEach((x)=>{
+                if(x.getElementsByClassName("card-p-item")[0].textContent.toLowerCase().includes(inputSearch.value.toLowerCase())){
+                    //console.log(x);
+                    x.classList.remove("card-item-hide");
+                }else{
+                    x.classList.add("card-item-hide");
+                };
+            });
+        }
+    });
+    
+});

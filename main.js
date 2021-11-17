@@ -57,7 +57,7 @@ async function readJSON(){
     
         //console.log(item);
         i++;
-        if(i>5) break;
+        if(i>500) break;
     }
 }
 
